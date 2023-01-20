@@ -87,6 +87,10 @@ nav .bars {
 .hero .main_sentence button:hover {
   transform: scale(1.03);
 }
+.hero .img img {
+  -webkit-animation: changePosition 1s infinite ease alternate;
+          animation: changePosition 1s infinite ease alternate;
+}
 
 .about .about_text {
   text-align: center;

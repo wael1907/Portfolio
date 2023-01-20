@@ -95,6 +95,9 @@ nav {
             transform: scale(1.03);
         }
     }
+    .img img {
+        animation: changePosition 1s infinite ease alternate;
+    }
     
 }
 
