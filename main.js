@@ -1,24 +1,34 @@
-let counters = document.querySelectorAll('.counter-item')
-let projects = document.querySelectorAll('.my-work .project')
-let rights = document.querySelectorAll('.toright')
-let lefts = document.querySelectorAll('.toleft')
-let circles = document.querySelectorAll('.act-cir')
+let counters = document.querySelectorAll('.counter-item'),
+projects = document.querySelectorAll('.my-work .project'),
+rights = document.querySelectorAll('.toright'),
+lefts = document.querySelectorAll('.toleft'),
+circles = document.querySelectorAll('.act-cir'),
+contactSection = document.getElementById('contact'),
+workSection = document.getElementById('work'),
+skillsSection = document.getElementById('skills')
 
 window.onscroll = function () {
     console.log(window.scrollY);
-    if(window.scrollY >= 700) {
+
+    if(window.scrollY >= skillsSection.offsetTop - 400) {
+        circles.forEach((circle) => circle.style.cssText = 'background:#d31f2b;')
+    } else {
+        circles.forEach((circle) => circle.style.cssText = 'background:rgb(163, 17, 28,.2);')
+    };
+
+    if(window.scrollY >= skillsSection.offsetTop - 300) {
         counters.forEach((counter) => counter.style.cssText = 'box-shadow: 0px 0px 10px 0px red;border-color: #a3111c')
     } else {
         counters.forEach((counter) => counter.style.cssText = 'box-shadow: none')
     };
 
-    if(window.scrollY >= 2650) {
+    if(window.scrollY >= workSection.offsetTop - 350) {
         projects.forEach((project) => project.style.cssText = 'opacity: 1;')
     } else {
         projects.forEach((project) => project.style.cssText = 'opacity: 0;')
     };
 
-    if(window.scrollY >= 3300) {
+    if(window.scrollY >= contactSection.offsetTop - 300) {
         rights.forEach((right) => right.style.cssText = 'transform: translateX(0)')
         lefts.forEach((left) => left.style.cssText = 'transform: translateX(0)')
     } else {
@@ -26,11 +36,6 @@ window.onscroll = function () {
         lefts.forEach((left) => left.style.cssText = 'transform: translateX(-1000)')
     };
 
-    if(window.scrollY >= 500) {
-        circles.forEach((circle) => circle.style.cssText = 'background:#d31f2b;')
-    } else {
-        circles.forEach((circle) => circle.style.cssText = 'background:rgb(163, 17, 28,.2);')
-    };
 }
 
 let year = document.querySelector('.year')
