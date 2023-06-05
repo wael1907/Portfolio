@@ -254,6 +254,7 @@ nav .bars {
   transition: 0.2s;
 }
 .contact .contact-item a p {
+  font-weight: 500;
   color: white;
   letter-spacing: 1px;
   transition: 0.2s;
