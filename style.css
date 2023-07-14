@@ -2,9 +2,24 @@ a {
   text-decoration: none;
 }
 
+.cursor {
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(calc(-50% + 15px), -50%);
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+  filter: blur(7px);
+}
+
 body {
   background-color: rgb(31, 31, 31);
   font-family: "Urbanist", sans-serif;
+  min-height: 100vh;
 }
 
 .special-span {
@@ -158,7 +173,7 @@ nav .bars {
   padding: 80px 0 60px;
 }
 .services .item_red {
-  background: linear-gradient(150deg, rgb(117, 12, 12), red);
+  background: linear-gradient(150deg, rgb(117, 12, 12), #d31f2b);
 }
 .services .item, .services .item_red {
   border-radius: 4px;
@@ -274,7 +289,7 @@ footer .reg .name {
   font-size: 20px;
   color: #d31f2b;
   letter-spacing: 1px;
-  text-shadow: 0px 0px 6px red;
+  text-shadow: 0px 0px 6px #d31f2b;
 }
 
 .hero, .services, .resume, .my-work, .contact {

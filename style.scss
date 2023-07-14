@@ -8,10 +8,24 @@ a {
     text-decoration: none;
 }
 
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 15px), -50%);
+    background-color: red;
+    width: 20px;
+    height: 20px;
+    z-index: 1000;
+    border-radius: 50%;
+    filter: blur(7px)
+}
 
 body {
     background-color: $bg-color ;
     font-family: 'Urbanist', sans-serif;
+    min-height: 100vh;
 }
 .special-span {
     margin-bottom: 10px;
@@ -189,7 +203,7 @@ nav {
     padding: 80px 0 60px;
     // height: 100vh;
     .item_red {
-        background:linear-gradient(150deg , rgb(117, 12, 12), red);
+        background:linear-gradient(150deg , rgb(117, 12, 12), $red);
     }
     .item,.item_red {
         border-radius: 4px;
@@ -318,7 +332,7 @@ footer {
             font-size: 20px;
             color: $red;
             letter-spacing: 1px;
-            text-shadow: 0px 0px 6px  red;
+            text-shadow: 0px 0px 6px  $red;
         
         }
     }
@@ -336,6 +350,9 @@ footer {
     transform: translateX(-1000px);
     transition: all 1s;
 }
+
+
+
 
 
 
