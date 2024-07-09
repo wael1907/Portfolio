@@ -5,14 +5,14 @@ lefts = document.querySelectorAll('.toleft'),
 circles = document.querySelectorAll('.act-cir'),
 contactSection = document.getElementById('contact'),
 workSection = document.getElementById('work'),
-skillsSection = document.getElementById('skills'),
-cursor = document.querySelector('.cursor')
+skillsSection = document.getElementById('skills')
+// cursor = document.querySelector('.cursor')
 
-window.addEventListener('mousemove',(e)=> {
+// window.addEventListener('mousemove',(e)=> {
 
-    cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+//     cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
 
-})
+// })
 
 window.onscroll = function () {
 
